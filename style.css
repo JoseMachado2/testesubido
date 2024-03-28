@@ -1,0 +1,26 @@
+table{
+background-color:rgb(228, 44, 44);
+justify-content: center;
+margin: auto;
+
+
+}
+
+body {
+background-image: url(https://i.pinimg.com/474x/8c/b3/88/8cb3888bfacc5c4a9c83892bea57d3f1.jpg);
+
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.itemMenu {
+
+    background-color: white;
+    font-size: 24px;
+    color: green;
+    border: 5px;
+}
+
+#espam {
+    background-color: black;
+    color: red;
+}
