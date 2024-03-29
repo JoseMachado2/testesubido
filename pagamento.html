@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Dados de Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: calc(100% - 24px);
+            /* Ajuste para o espaçamento interno */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+            /* Espaçamento entre os botões */
+        }
+
+        input[type="submit"].confirm {
+            background-color: #6ee66e;
+            /* Cor de fundo verde para o botão de confirmação */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="submit"].confirm:hover {
+            background-color: #5cc95c;
+            /* Cor de fundo verde mais escura no hover */
+        }
+
+        .confirm-btn-container {
+            display: inline-block;
+            margin-top: 10px;
+            /* Espaçamento entre os botões e os campos de entrada */
+        }
+    </style>
+
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '937268357840652');
+        fbq('track', 'AddPaymentInfo');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=937268357840652&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Adicionar Dados de Pagamento</h1>
+        <form id="paymentForm">
+            <label for="cardNumber">Número do Cartão:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+
+            <label for="cardName">Nome no Cartão:</label>
+            <input type="text" id="cardName" name="cardName" placeholder="Seu Nome">
+
+            <label for="expiryDate">Data de Expiração:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123">
+
+            <div class="confirm-btn-container">
+                <input type="submit" value="Confirmar" onclick="changeButtonColor(); return false;">
+                <input type="submit" id="confirmPaymentButton" class="confirm" value="Cancelar"
+                    style="background-color: #d3d3d3;"> <!-- Botão de confirmação inicialmente cinza claro -->
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function changeButtonColor() {
+            var confirmButton = document.querySelector('.confirm');
+            confirmButton.style.backgroundColor = '#6ee66e'; // Alterando a cor do botão para verde
+
+            window.location.href = "comprou.html"; // Redirecionando para comprou.html ao clicar no botão verde
+
+        }
+    </script>
+</body>
+
+</html>

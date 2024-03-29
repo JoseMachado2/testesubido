@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - NIKE</title>
+    <style>
+        body {
+            background-image: url(https://i.pinimg.com/474x/8c/b3/88/8cb3888bfacc5c4a9c83892bea57d3f1.jpg);
+
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .confirmation-message {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .product-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '937268357840652');
+        fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=937268357840652&ev=PageView&noscript=1" /></noscript>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Compra Confirmada</h1>
+        <p class="confirmation-message">Obrigado por comprar o Nike Shox!</p>
+        <img class="product-image"
+            src="http://d3ugyf2ht6aenh.cloudfront.net/stores/536/783/products/tenisnikeshox12molas-comprarnike12molas-nikeshox12molasoriginal-comprarnikeshox12molasbarato-branco-011-c9b94a2d0095376f9e16049333241317-640-01-6779876e4fc088779816083023755471-640-0.jpg"
+            alt="Nike Shox">
+    </div>
+</body>
+
+</html>
